@@ -59,6 +59,12 @@ public class EmployeeResource {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
+	@GetMapping("/user")
+	public ResponseEntity <List<Employee>> getAEmployee(){
+		List<Employee> employees = employeeService.findAllEmployees();
+		return new ResponseEntity<> (employees,HttpStatus.OK);
+		
+	}
 	
 	
 	
