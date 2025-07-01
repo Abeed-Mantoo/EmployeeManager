@@ -66,6 +66,13 @@ public class EmployeeResource {
 		
 	}
 	
+	@GetMapping("/new")
+	public ResponseEntity <List<Employee>> getAnEmployee(){
+		List<Employee> employees = employeeService.findAllEmployees();
+		return new ResponseEntity<> (employees,HttpStatus.OK);
+		
+	}
+	
 	
 	
 	
